@@ -267,7 +267,7 @@ def train(**kwargs):
 
     # save checkpoint model
     if epoch % save_freq == 0:
-        state_dict = net.module.state_dict()
+        state_dict = net.state_dict()
         for key in state_dict.keys():
             state_dict[key] = state_dict[key].cpu()
 
